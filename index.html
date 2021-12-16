@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e2e</title>
+</head>
+<body>
+    <input type="number" id="n1">
+    <input type="number" id="n2">
+    <input type="number" id="n3">
+    <input type="number" id="n4">
+    <input type="number" id="n5">
+    <input type="number" id="n6">
+
+    <input type="number"  id="result1">
+    <input type="number"  id="result2">
+
+    <button id="bt" onclick="solve()">Solve</button>
+
+    <script>
+        function solve() {
+            var a = document.getElementById('n1').value;
+            var b = document.getElementById('n2').value;
+            var c = document.getElementById('n3').value;
+            var d = document.getElementById('n4').value;
+            var e = document.getElementById('n5').value;
+            var f = document.getElementById('n6').value;
+
+            var y = (a * f - c * d) / (a * e - b * d)
+            var x = (c * e - b * f) / (a * e - b * d)
+
+            document.getElementById('result1').value = y;
+            document.getElementById('result2').value = x;
+        }
+    </script>
+</body>
+</html>
